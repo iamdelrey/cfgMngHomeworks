@@ -1,0 +1,37 @@
+{
+    subject = "Конфигурационное управление";
+    groups = for(1 35 1 "ИКБО-&-22");
+    student1 =
+    (
+        age(17)
+        group("ИКБО-07-23")
+        name("Иванов Егор")
+    );
+    student2 =
+    (
+        age(20)
+        group("ИКБО-14-21")
+        name("Антонов Богдан")
+    );
+    student3 =
+    (
+        age(36)
+        group("ИКБО-14-29")
+        name("Корчемин Иван")
+    );
+}
+
+(
+    groups(
+            &groups
+          )
+    students(
+            &student1
+            &student2
+            &student3
+        (
+            age(19) group("ИКБО-32-22") name("Меликов Арсений")
+        )
+    )
+    subject(&subject)
+)
